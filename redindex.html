@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    
+
+    <section class="home">
+      <div class="content active">
+        <h2 style="color:black">Análisis Teachable Machine</h2>  
+        <h2 style="color:black">Creación de las clases</h2>
+        <p style="color:black">En esta sección se especifican las diferentes clases con las cuales contará el modelo. Cada clase se debe dotar con muestras, es decir, datos mediante las cuales el modelo se entrenará para reconocer datos del mismo tipo posteriormente. La colección de las muestras de cada clase se denomina conjunto de datos de preparación.</p>
+        <h2 style="color:black">Preparación del modelo</h2>
+        <p style="color:black">En esta sección se entrena el modelo para poder probarlo, tiene las siguientes opciones ajustables:
+            <br> 1. Épocas. Es la cantidad de veces que el modelo procesa el conjunto de datos de preparación; en general, a mayor número de épocas el modelo realiza mejores predicciones.
+        <br>2. Tamaño del lote. Si se tiene una cantidad k de lotes, se dividen los datos de cada clase en lotes de tamaño k, de modo que el modelo completa una epoca cuando procese los k lotes de cada clase.
+        <br>3. Tasa de apredizaje. En términos simples, la tasa de aprendizaje le dice a ciertos vectores gradientes con que velocidad moverse para alcanzar máximos y mínimos, es decir, afecta la velocidad con la que el algortimo se vuelve más óptimo.
+        <br>Cambiar la tasa de aprendizaje puede dañar el modelo.
+        </p>
+        <h2 style="color:black">Vista previa y exportación del modelo</h2>
+        <p style="color:black">Se prueba el modelo y se verifica que funcione correctamemte para exportarlo. Se puede exportar en formato javascript o TensorFlow lite para ser probado en la app de TensorFlow. Se puede descargar o subir a la nube, en esta última opción, tensorFlow llama al modelo a través de un link que se puede implementar en otros proyectos, siempre y cuando se tenga acceso a internet.
+        <br> En el caso de los modelos de sonido, al exportarse el modelo, se puede elegir el factor de superposición del mismo, este factor determina la frecuencia con la cual el último segundo de audio se compara con el modelo.   
+        </p>
+
+    </section>
+  </body>
+</html>

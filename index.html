@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Reconocimiento por Machine Learning</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="redindex.html">Red Neuronal</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="vr.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="sound.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="yoga.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Reconocimiento de imagen</h1>
+        <p>Este modelo reconoce las siguientes razas de perro: pastor alemán, pug (beige), dálmata y rottweiler.
+          <br> Está configurado con 100 épocas, tamaño de lote 16 y tasa de aprendizaje de 0.001.
+        </p>
+        <a href="indeximage.html">Usar Modelo</a>
+      </div>
+      <div class="content">
+        <h1>Reconocimiento de sonido</h1>
+        <p>Este modelo reconoce los sonidos emitidos por los siguientes animales: perros, gatos, vacas y pájaros.
+          <br> Está configurado con 100 épocas y un factor de superposición de 0.5.
+        </p>
+        <a href="indexsound.html">Usar Modelo</a>
+      </div>
+      <div class="content">
+        <h1>Reconociemiento de posturas</h1>
+        <p>Este modelo reconoce las siguientes poses corporales: Parado (de frente o de lado), inclinado (hacia la izquierda o hacia la derecha) y tener una rodilla levantada.
+          <br> Está configurado con 200 épocas, tamaño de lote 16 y tasa de aprendizaje de 0.0001. 
+        </p>
+        <a href="indexposes.html">Usar Modelo</a>
+      </div>
+      
+      
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
